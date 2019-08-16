@@ -176,6 +176,8 @@
 		6D45FC0523051EDD00FB44A5 /* ViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D45FC0323051EDD00FB44A5 /* ViewBorder.swift */; };
 		6D45FC08230523CC00FB44A5 /* NavigableForPullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D45FC07230523CC00FB44A5 /* NavigableForPullRequestCell.swift */; };
 		6D45FC09230523CC00FB44A5 /* NavigableForPullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D45FC07230523CC00FB44A5 /* NavigableForPullRequestCell.swift */; };
+		6D83BC9C2307165400A40F36 /* NavigationBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D83BC9B2307165400A40F36 /* NavigationBarConfiguration.swift */; };
+		6D83BC9D2307165400A40F36 /* NavigationBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D83BC9B2307165400A40F36 /* NavigationBarConfiguration.swift */; };
 		6DD3F18423067D2B003FF476 /* NavigableForSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD3F18323067D2B003FF476 /* NavigableForSafariViewController.swift */; };
 		6DD3F18523067D2B003FF476 /* NavigableForSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD3F18323067D2B003FF476 /* NavigableForSafariViewController.swift */; };
 		6DD3F18723068293003FF476 /* PullRequestSummaryDestinationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD3F18623068293003FF476 /* PullRequestSummaryDestinationScreen.swift */; };
@@ -294,6 +296,7 @@
 		6D45FC002303D06A00FB44A5 /* RepoSummaryViewControllerNavigationBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSummaryViewControllerNavigationBehavior.swift; sourceTree = "<group>"; };
 		6D45FC0323051EDD00FB44A5 /* ViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBorder.swift; sourceTree = "<group>"; };
 		6D45FC07230523CC00FB44A5 /* NavigableForPullRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigableForPullRequestCell.swift; sourceTree = "<group>"; };
+		6D83BC9B2307165400A40F36 /* NavigationBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfiguration.swift; sourceTree = "<group>"; };
 		6DD3F18323067D2B003FF476 /* NavigableForSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigableForSafariViewController.swift; sourceTree = "<group>"; };
 		6DD3F18623068293003FF476 /* PullRequestSummaryDestinationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestSummaryDestinationScreen.swift; sourceTree = "<group>"; };
 		6DD3F18A23068917003FF476 /* FormattingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattingText.swift; sourceTree = "<group>"; };
@@ -727,6 +730,7 @@
 				6DD3F189230688E9003FF476 /* FormattingText */,
 				6D45FB552303C16500FB44A5 /* ObtainImage */,
 				6D45FB542303C16400FB44A5 /* BaseConfigurationViewController */,
+				6D83BC9A2307163700A40F36 /* NavigationBarConfiguration */,
 				6D45FB532303C16400FB44A5 /* Alert */,
 				6D45FB522303C16300FB44A5 /* ActivityIndicator */,
 				6D45FB512303C16200FB44A5 /* NativeComponents */,
@@ -1044,6 +1048,14 @@
 			path = NavigableCell;
 			sourceTree = "<group>";
 		};
+		6D83BC9A2307163700A40F36 /* NavigationBarConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				6D83BC9B2307165400A40F36 /* NavigationBarConfiguration.swift */,
+			);
+			path = NavigationBarConfiguration;
+			sourceTree = "<group>";
+		};
 		6DD3F189230688E9003FF476 /* FormattingText */ = {
 			isa = PBXGroup;
 			children = (
@@ -1306,6 +1318,7 @@
 				6D45FB9F2303CB5400FB44A5 /* Navigator.swift in Sources */,
 				6D45FBD32303CF6600FB44A5 /* PullRequestSummaryViewController.swift in Sources */,
 				6D45FBEE2303D00300FB44A5 /* PullRequestSummaryPresenter.swift in Sources */,
+				6D83BC9C2307165400A40F36 /* NavigationBarConfiguration.swift in Sources */,
 				6D45FC0423051EDD00FB44A5 /* ViewBorder.swift in Sources */,
 				6D45FB762303C79700FB44A5 /* SafariViewControllerDestination.swift in Sources */,
 				6D45FBF82303D02300FB44A5 /* PullRequestSummaryDestinationConfiguration.swift in Sources */,
@@ -1346,6 +1359,7 @@
 				6D45FB732303C75900FB44A5 /* NativeComponentsBehavior.swift in Sources */,
 				6D45FAF82300F39A00FB44A5 /* ListPullRequest.swift in Sources */,
 				6D45FAEF2300A2E100FB44A5 /* PullRequestsProvider.swift in Sources */,
+				6D83BC9D2307165400A40F36 /* NavigationBarConfiguration.swift in Sources */,
 				6D45FB7A2303C7AD00FB44A5 /* SafariViewControllerDestinationConfiguration.swift in Sources */,
 				6D45FB172301244200FB44A5 /* RemoteAddress.swift in Sources */,
 				6DD3F18823068293003FF476 /* PullRequestSummaryDestinationScreen.swift in Sources */,

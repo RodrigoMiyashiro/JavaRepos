@@ -30,7 +30,7 @@ class PullRequestSummaryTableViewCell: UITableViewCell, IdentifiableCell {
         self.pullRequestNameLabel.text = pullRequest.title
         self.pullRequestDescriptionLabel.text = pullRequest.body
         self.pullRequestStatusLabel.text = pullRequest.state
-        self.pullRequestCreatedAtLabel.text = String(format: "Criado\n%@", pullRequest.createdAt.formatDate)
+        self.pullRequestCreatedAtLabel.text = String(format: "Created at\n%@", pullRequest.createdAt.formatDate)
 
         let owner = pullRequest.user
         self.set(owner)
