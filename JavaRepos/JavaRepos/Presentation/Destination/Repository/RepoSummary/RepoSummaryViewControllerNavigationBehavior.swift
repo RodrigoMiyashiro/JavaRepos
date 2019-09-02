@@ -12,9 +12,8 @@ extension RepoSummaryViewController: NavigableForPullRequestCell {
                                                   message: message,
                                                   buttonTitle: "Ok")
 
-        self.present(destination.viewController,
-                     animated: true,
-                     completion: nil)
+        self.navigator?.navigate(to: destination,
+                                 mode: .fromCurrent)
     }
 
     func openNextView(with ownerName: String, and repoName: String) {

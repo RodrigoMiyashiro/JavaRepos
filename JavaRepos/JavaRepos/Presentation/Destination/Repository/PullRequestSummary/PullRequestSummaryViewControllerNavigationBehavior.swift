@@ -12,16 +12,14 @@ extension PullRequestSummaryViewController: NavigableForSafariViewController {
                                                   message: message,
                                                   buttonTitle: "Ok")
 
-        self.present(destination.viewController,
-                     animated: true,
-                     completion: nil)
+        self.navigator?.navigate(to: destination,
+                                 mode: .fromCurrent)
     }
 
     func openSafariViewController(with urlString: String) {
         let destination = SafariViewControllerDestination(urlString: urlString)
 
-        self.present(destination.viewController,
-                     animated: true,
-                     completion: nil)
+        self.navigator?.navigate(to: destination,
+                                 mode: .fromCurrent)
     }
 }
