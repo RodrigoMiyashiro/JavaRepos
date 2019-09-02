@@ -7,14 +7,13 @@
 //
 
 protocol HTTPClient {
-    typealias queryParamenters = [String: String]?
-    typealias headerParamenters = [String: String]?
-    typealias bodyParamenters = [String: Any]?
-    
+    typealias QueryParamenters = [String: String]?
+    typealias HeaderParamenters = [String: String]?
+    typealias BodyParamenters = [String: Any]?
+
     func request<T>(_ remote: RemoteAddress,
                     httpMethod: HTTPMethod,
-                    queryParamenters: queryParamenters,
-                    headerParamenters: headerParamenters,
-                    bodyParamenters: bodyParamenters) throws -> T? where T: Decodable
+                    queryParamenters: QueryParamenters,
+                    headerParamenters: HeaderParamenters,
+                    bodyParamenters: BodyParamenters) throws -> T? where T: Decodable
 }
-

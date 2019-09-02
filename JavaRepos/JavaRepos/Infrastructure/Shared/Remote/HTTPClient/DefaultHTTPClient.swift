@@ -9,7 +9,11 @@
 import Foundation
 
 class DefaultHTTPClient: HTTPClient {
-    func request<T>(_ remote: RemoteAddress, httpMethod: HTTPMethod, queryParamenters: [String : String]? = nil, headerParamenters: [String : String]? = nil, bodyParamenters: [String : Any]? = nil) throws -> T? where T : Decodable {
+    func request<T>(_ remote: RemoteAddress,
+                    httpMethod: HTTPMethod,
+                    queryParamenters: [String: String]? = nil,
+                    headerParamenters: [String: String]? = nil,
+                    bodyParamenters: [String: Any]? = nil) throws -> T? where T: Decodable {
         let urlComponents = remote.urlComponents(parameters: queryParamenters)
 
         guard let remoteURL = urlComponents.url else {
@@ -20,14 +24,14 @@ class DefaultHTTPClient: HTTPClient {
         request.httpMethod = httpMethod.rawValue
         request.allHTTPHeaderFields = headerParamenters
         request.httpBody = self.createBody(bodyParamenters)
-    
+
         let semaphoro = DispatchSemaphore(value: 0)
         let session = URLSession(configuration: URLSessionConfiguration.default)
 
         var responseData: T?
         var responseError: Error?
 
-        session.dataTask(with: request) { (data, response, error) in
+        session.dataTask(with: request) { (data, _, error) in
             guard error == nil else {
                 responseError = error
                 semaphoro.signal()

@@ -14,7 +14,6 @@ class PullRequestSummaryDestination: Destination {
     private var createdViewController: UIViewController?
 
     var viewController: UIViewController {
-        get {
             if let existingViewController = self.createdViewController {
                 return existingViewController
             }
@@ -25,7 +24,6 @@ class PullRequestSummaryDestination: Destination {
             screen.repoName = self.repoName
 
             return screen as! UIViewController
-        }
     }
 
     init(ownerName: String, repoName: String) {
