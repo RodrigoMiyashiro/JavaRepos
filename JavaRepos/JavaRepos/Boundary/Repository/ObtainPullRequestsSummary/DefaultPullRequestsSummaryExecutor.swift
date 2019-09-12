@@ -12,7 +12,10 @@ class DefaultPullRequestsSummaryExecutor: ObtainPullRequestsSummaryExecutor, Pul
     private var isSuccess = false
     private var obtainPullRequests: ListPullRequest?
 
-    func obtainPullRequestsSummary(_ ownerName: String, repositoryName: String, page: Int, completion: @escaping (ListPullRequest?, Error?) -> Void) {
+    func obtainPullRequestsSummary(_ ownerName: String,
+                                   repositoryName: String,
+                                   page: Int,
+                                   completion: @escaping (ListPullRequest?, Error?) -> Void) {
         let clientHTTP = DefaultHTTPClient()
         let provider = DefaultPullRequestSummaryProvider(client: clientHTTP)
         let obtainPullRequestsSummary = ObtainPullRequests(provider: provider,

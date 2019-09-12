@@ -14,18 +14,16 @@ class AlertMessageTypeDestination: Destination {
     private var buttonTitle: String
 
     var viewController: UIViewController {
-        get {
-            let alertController = UIAlertController(title: self.title,
-                                                    message: self.message,
-                                                    preferredStyle: .alert)
-            let actionButton = UIAlertAction(title: self.buttonTitle,
-                                             style: .default,
-                                             handler: nil)
+        let alertController = UIAlertController(title: self.title,
+                                                message: self.message,
+                                                preferredStyle: .alert)
+        let actionButton = UIAlertAction(title: self.buttonTitle,
+                                         style: .default,
+                                         handler: nil)
 
-            alertController.addAction(actionButton)
+        alertController.addAction(actionButton)
 
-            return alertController
-        }
+        return alertController
     }
 
     init(title: String, message: String, buttonTitle: String) {
@@ -34,4 +32,3 @@ class AlertMessageTypeDestination: Destination {
         self.buttonTitle = buttonTitle
     }
 }
-

@@ -10,8 +10,6 @@ import UIKit
 
 class PullRequestSummaryTypeDestination: Destination {
     var viewController: UIViewController {
-        get {
-            return self.initialViewController(ofStoryboard: "PullRequestSummaryStoryboard")
-        }
+        return self.initialViewController(ofStoryboard: "PullRequestSummaryStoryboard")
     }
 }

@@ -12,7 +12,7 @@ private let initialPosition: Int = 1
 
 final class RepoSummaryViewController: BaseConfigurationViewController, RepoSummaryShowScreen {
     internal var presenter: RepoSummaryPresenter?
-    internal var dataSourceDelegateForRepoSummaryTableView = TableViewForCarRepairSummary()
+    internal var dataSourceDelegateForRepoTableView = TableViewForCarRepairSummary()
     internal var wasCalledInfiniteScroll: Bool = false
     internal var currentPage: Int = initialPosition
 
@@ -20,7 +20,7 @@ final class RepoSummaryViewController: BaseConfigurationViewController, RepoSumm
 
     internal var listRepositories: ListRepositories? {
         didSet {
-            self.dataSourceDelegateForRepoSummaryTableView.listRepositories = self.listRepositories
+            self.dataSourceDelegateForRepoTableView.listRepositories = self.listRepositories
             self.repoTableView.reloadData()
         }
     }
@@ -63,6 +63,7 @@ final class RepoSummaryViewController: BaseConfigurationViewController, RepoSumm
     func showErrorObtainingListRepositoriesSummary() {
         self.stopActivityIndicator()
         self.refreshControl?.endRefreshing()
-        self.showAlert(withMessage: "Não foi possível mostrar os repositórios Java no momento. Tente novamente mais tarde.")
+        let message = "Não foi possível mostrar os repositórios Java no momento. Tente novamente mais tarde."
+        self.showAlert(withMessage: message)
     }
 }

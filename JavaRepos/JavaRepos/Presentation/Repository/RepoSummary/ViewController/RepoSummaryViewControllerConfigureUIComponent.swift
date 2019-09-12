@@ -10,10 +10,10 @@ import UIKit
 
 extension RepoSummaryViewController {
     internal func configureTableView() {
-        self.dataSourceDelegateForRepoSummaryTableView.delegateForPullRequests = self
+        self.dataSourceDelegateForRepoTableView.delegateForPullRequests = self
 
-        self.repoTableView.dataSource = self.dataSourceDelegateForRepoSummaryTableView
-        self.repoTableView.delegate = self.dataSourceDelegateForRepoSummaryTableView
+        self.repoTableView.dataSource = self.dataSourceDelegateForRepoTableView
+        self.repoTableView.delegate = self.dataSourceDelegateForRepoTableView
         self.repoTableView.tableFooterView = UIView()
     }
 

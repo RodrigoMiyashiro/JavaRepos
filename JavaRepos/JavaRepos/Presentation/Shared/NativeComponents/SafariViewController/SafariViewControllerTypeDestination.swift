@@ -13,15 +13,12 @@ class SafariViewControllerTypeDestination: Destination {
     private var url: URL
 
     var viewController: UIViewController {
-        get {
-            let safariViewController = SFSafariViewController(url: self.url)
+        let safariViewController = SFSafariViewController(url: self.url)
 
-            return safariViewController
-        }
+        return safariViewController
     }
 
     init(url: URL) {
         self.url = url
     }
 }
-

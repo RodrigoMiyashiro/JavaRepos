@@ -51,7 +51,7 @@ class ObtainPullRequestsTest: XCTestCase {
 
         XCTAssert(providerMock.callsToAvailablePullRequestsSummary == 1,
                   "There should be at least 1 call to provider's available obtain pull requests summary.")
-        XCTAssert(self.receiver?.callsToHandleErrorObtainingPullRequestsSummary == 1,
+        XCTAssert(self.receiver?.callsToHandleErrorObtainingPullRequests == 1,
                   "There should be at least 1 call to receiver's main method - Failure.")
     }
 }

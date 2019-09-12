@@ -15,7 +15,7 @@ class RepoSummaryTableViewCell: UITableViewCell, IdentifiableCell {
     @IBOutlet weak var repoNumberOfStarsLabel: UILabel!
     @IBOutlet weak var repoOwnerPhotoImage: UIImageView!
     @IBOutlet weak var repoOwnerNameLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
 

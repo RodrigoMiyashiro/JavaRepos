@@ -19,7 +19,7 @@ class ObtainRepositoriesTest: XCTestCase {
 
     override func tearDown() {
         self.receiver = nil
-    
+
         super.tearDown()
     }
 
@@ -47,7 +47,7 @@ class ObtainRepositoriesTest: XCTestCase {
 
         XCTAssert(providerMock.callsToAvailableRepositoriesSummary == 1,
                   "There should be at least 1 call to provider's available obtain repositories summary.")
-        XCTAssert(self.receiver?.callsToHandleErrorObtainingRepositoriesSummary == 1,
+        XCTAssert(self.receiver?.callsToHandleErrorObtainingRepositories == 1,
                   "There should be at least 1 call to receiver's main method - Failure.")
     }
 }
