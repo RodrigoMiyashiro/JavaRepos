@@ -7,7 +7,7 @@
 //
 
 struct PullRequest: Codable {
-    var id: Int64
+    var identifier: Int64
     var title: String
     var url: String
     var createdAt: String
@@ -17,7 +17,7 @@ struct PullRequest: Codable {
     var user: RepoOwner
 
     private enum CodingKeys: String, CodingKey {
-        case id
+        case identifier = "id"
         case title
         case url = "html_url"
         case createdAt = "created_at"

@@ -14,7 +14,7 @@ extension String {
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .short
         dateFormatter.locale = Locale(identifier: "pt_BR")
-    
+
         guard let dateForConverted = self.getDate(with: self) else {
             return ""
         }
@@ -23,7 +23,7 @@ extension String {
 
         return dateFormatted
     }
-    
+
     private func getDate(with stringDate: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"

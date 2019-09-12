@@ -8,7 +8,7 @@
 
 class RepositoriesReceiverMock: RepositoriesReceiver {
     var callsToReceiverRepositoriesSummary = 0
-    var callsToHandleErrorObtainingRepositoriesSummary = 0
+    var callsToHandleErrorObtainingRepositories = 0
 
     var obtainRepositories: ListRepositories?
 
@@ -19,6 +19,6 @@ class RepositoriesReceiverMock: RepositoriesReceiver {
     }
 
     func handleErrorObtainingRepositories() {
-        self.callsToHandleErrorObtainingRepositoriesSummary += 1
+        self.callsToHandleErrorObtainingRepositories += 1
     }
 }

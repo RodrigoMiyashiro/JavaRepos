@@ -14,16 +14,16 @@ class PullRequestSummaryDestination: Destination {
     private var createdViewController: UIViewController?
 
     var viewController: UIViewController {
-            if let existingViewController = self.createdViewController {
-                return existingViewController
-            }
+        if let existingViewController = self.createdViewController {
+            return existingViewController
+        }
 
-            let destination = self.destinationBuilder()
-            var screen = destination.viewController as! PullRequestSummaryDestinationScreen
-            screen.ownerName = self.ownerName
-            screen.repoName = self.repoName
+        let destination = self.destinationBuilder()
+        var screen = destination.viewController as! PullRequestSummaryDestinationScreen
+        screen.ownerName = self.ownerName
+        screen.repoName = self.repoName
 
-            return screen as! UIViewController
+        return screen as! UIViewController
     }
 
     init(ownerName: String, repoName: String) {

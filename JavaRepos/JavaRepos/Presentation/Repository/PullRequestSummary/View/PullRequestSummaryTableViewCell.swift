@@ -15,7 +15,7 @@ class PullRequestSummaryTableViewCell: UITableViewCell, IdentifiableCell {
     @IBOutlet weak var pullRequestCreatedAtLabel: UILabel!
     @IBOutlet weak var pullRequestOwnerPhotoImage: UIImageView!
     @IBOutlet weak var pullRequestOwnerNameLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
 

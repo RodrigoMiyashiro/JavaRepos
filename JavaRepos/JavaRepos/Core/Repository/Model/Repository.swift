@@ -7,7 +7,7 @@
 //
 
 struct Repository: Codable {
-    var id: Int64
+    var identifier: Int64
     var name: String
     var description: String
     var stargazersCount: Int64
@@ -15,7 +15,7 @@ struct Repository: Codable {
     var owner: RepoOwner
 
     private enum CodingKeys: String, CodingKey {
-        case id
+        case identifier = "id"
         case name
         case description
         case stargazersCount = "stargazers_count"

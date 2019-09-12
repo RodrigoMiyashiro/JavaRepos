@@ -7,5 +7,8 @@
 //
 
 protocol ObtainPullRequestsSummaryExecutor: AnyObject {
-    func obtainPullRequestsSummary(_ ownerName: String, repositoryName: String, page: Int, completion: @escaping(ListPullRequest?, Error?) -> Void)
+    func obtainPullRequestsSummary(_ ownerName: String,
+                                   repositoryName: String,
+                                   page: Int,
+                                   completion: @escaping(ListPullRequest?, Error?) -> Void)
 }
