@@ -7,12 +7,12 @@
 //
 
 struct RepoOwner: Codable {
-    var id: Int64
+    var identifier: Int64
     var name: String
     var urlImage: String
 
     private enum CodingKeys: String, CodingKey {
-        case id
+        case identifier = "id"
         case name = "login"
         case urlImage = "avatar_url"
     }

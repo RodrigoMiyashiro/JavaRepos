@@ -10,10 +10,10 @@ import UIKit
 
 extension PullRequestSummaryViewController {
     internal func configureTableView() {
-        self.dataSourceDelegateForPullRequestSummaryTableView.delegateForSafariViewController = self
+        self.dataSourceDelegatePullRequestTableView.delegateForSafariViewController = self
 
-        self.pullRequestTableView.dataSource = self.dataSourceDelegateForPullRequestSummaryTableView
-        self.pullRequestTableView.delegate = self.dataSourceDelegateForPullRequestSummaryTableView
+        self.pullRequestTableView.dataSource = self.dataSourceDelegatePullRequestTableView
+        self.pullRequestTableView.delegate = self.dataSourceDelegatePullRequestTableView
         self.pullRequestTableView.tableFooterView = UIView()
     }
 

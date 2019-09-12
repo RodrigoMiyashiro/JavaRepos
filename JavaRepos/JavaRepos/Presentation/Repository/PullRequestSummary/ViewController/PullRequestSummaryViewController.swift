@@ -10,12 +10,14 @@ import UIKit
 
 private let initialPosition: Int = 1
 
-class PullRequestSummaryViewController: BaseConfigurationViewController, PullRequestSummaryDestinationScreen, PullRequestSummaryShowScreen {
+class PullRequestSummaryViewController: BaseConfigurationViewController,
+                                        PullRequestSummaryDestinationScreen,
+                                        PullRequestSummaryShowScreen {
     var repoName: String?
     var ownerName: String?
 
     internal var presenter: PullRequestSummaryPresenter?
-    internal var dataSourceDelegateForPullRequestSummaryTableView = TableViewForPullRequestSummary()
+    internal var dataSourceDelegatePullRequestTableView = TableViewForPullRequestSummary()
     internal var wasCalledInfiniteScroll: Bool = false
     internal var currentPage: Int = initialPosition
 
@@ -23,13 +25,13 @@ class PullRequestSummaryViewController: BaseConfigurationViewController, PullReq
 
     internal var listPullRequest: ListPullRequest? {
         didSet {
-            self.dataSourceDelegateForPullRequestSummaryTableView.listPullRequest = self.listPullRequest
+            self.dataSourceDelegatePullRequestTableView.listPullRequest = self.listPullRequest
             self.pullRequestTableView.reloadData()
         }
     }
 
     @IBOutlet weak var pullRequestTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,6 +66,7 @@ class PullRequestSummaryViewController: BaseConfigurationViewController, PullReq
     func showErrorObtainingListPullRequestSummary() {
         self.stopActivityIndicator()
         self.refreshControl?.endRefreshing()
-        self.showAlert(withMessage: "Não foi possível mostrar os Pull Request do repositório selecionado no momento. Tente novamente mais tarde.")
+        let message = "Não foi possível mostrar os Pull Request do repositório selecionado no momento. Tente novamente mais tarde."
+        self.showAlert(withMessage: message)
     }
 }

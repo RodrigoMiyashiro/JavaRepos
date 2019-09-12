@@ -10,8 +10,6 @@ import UIKit
 
 class RepoSummaryTypeDestination: Destination {
     var viewController: UIViewController {
-        get {
-            return self.initialViewController(ofStoryboard: "RepoSummaryStoryboard")
-        }
+        return self.initialViewController(ofStoryboard: "RepoSummaryStoryboard")
     }
 }

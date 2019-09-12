@@ -51,7 +51,7 @@ class DefaultHTTPClient: HTTPClient {
 
         semaphoro.wait()
 
-        if let _ = responseError {
+        if responseError != nil {
             throw HTTPError.requestError("There was an error with the request.")
         }
 

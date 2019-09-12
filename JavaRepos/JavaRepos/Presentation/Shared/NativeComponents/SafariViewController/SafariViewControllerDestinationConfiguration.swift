@@ -9,7 +9,7 @@
 import UIKit
 
 extension SafariViewControllerDestination {
-    func destinationBuilder(url: URL) -> Destination{
+    func destinationBuilder(url: URL) -> Destination {
         return SafariViewControllerTypeDestination(url: url)
     }
 }

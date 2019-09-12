@@ -8,7 +8,7 @@
 
 class PullRequestsReceiverMock: PullRequestsReceiver {
     var callsToReceiverPullRequestsSummary = 0
-    var callsToHandleErrorObtainingPullRequestsSummary = 0
+    var callsToHandleErrorObtainingPullRequests = 0
 
     var obtainPullRequests: ListPullRequest?
 
@@ -19,6 +19,6 @@ class PullRequestsReceiverMock: PullRequestsReceiver {
     }
 
     func handleErrorObtainingPullRequests() {
-        self.callsToHandleErrorObtainingPullRequestsSummary += 1
+        self.callsToHandleErrorObtainingPullRequests += 1
     }
 }

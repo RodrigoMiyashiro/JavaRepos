@@ -14,20 +14,18 @@ class SafariViewControllerDestination: Destination {
     private var urlString: String
 
     var viewController: UIViewController {
-        get {
-            if let existingViewController = self.createdViewController {
-                return existingViewController
-            }
-
-            guard let url = URL(string: self.urlString) else {
-                return UIViewController()
-            }
-
-            let destination = self.destinationBuilder(url: url)
-            let screen = destination.viewController
-
-            return screen
+        if let existingViewController = self.createdViewController {
+            return existingViewController
         }
+
+        guard let url = URL(string: self.urlString) else {
+            return UIViewController()
+        }
+
+        let destination = self.destinationBuilder(url: url)
+        let screen = destination.viewController
+
+        return screen
     }
 
     init(urlString: String) {
